@@ -82,6 +82,8 @@ Yhteenvetona voin todeta, etten osannut tulkita testituloksia, mutta koska virtu
 ## Lähteet
 Tehtävä: https://terokarvinen.com/linux-palvelimet/#h1-oma-linux
 
+FSF - What is Free Software: https://www.gnu.org/philosophy/free-sw.html
+
 Ohjeet: https://terokarvinen.com/2021/install-debian-on-virtualbox/
 
 Debian image: https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-12.6.0-amd64-xfce.iso
