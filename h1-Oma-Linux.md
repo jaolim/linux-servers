@@ -49,7 +49,7 @@ Sysbench manuaali (man sysbench komento):
 
 ![Sysbench Manual](h1_x2_sysbench_manual.png)
 
-Testin asetukset (neljän loogisen ytimen testi):
+Testin asetukset (neljän ytimen testi):
 
 ![Benchmark Parameters](h1_x3_benchmark_parameters.png)
 
@@ -57,7 +57,7 @@ Testitulokset:
 
 ![Benchmark Results](h1_x4_benchmark_results.png)
 
-Yhteenvetona voin todeta, etten osaa tarkemmin tulkita testituloksia, mutta koska virtuaalikone tai pyörittänyt pöytäkone eivät kaatuneet, joten pidän sitä onnistuneena.
+Yhteenvetona voin todeta, etten osaa tulkita testituloksia, mutta koska virtuaalikone tai sitä pyörittävä pöytäkone eivät kaatuneet, pidän sitä onnistuneena.
 
 
 ## Lähteet
