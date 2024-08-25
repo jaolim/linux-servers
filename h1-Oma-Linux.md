@@ -1,33 +1,33 @@
 # h1 Oma Linux
 
-# x) FSF Free Software Definition
+## x) FSF Free Software Definition
 
 Free Software Foundation määrittää vapaan ohjelmiston ohjelmistoksi, jota voi ajaa, muokata, tutkia, kopioida, ja julkaista haluamallaan tavalla.
 Edellytys tälle on pääsy lähtekoodiin.
 
-# Vapaan ohjelman kaupallisuus
+### Vapaan ohjelman kaupallisuus
 
 Oikeus käyttää ohjelmaa kaupallisesti on turvattava tai se ei ole vapaa ohjelma.
 Tämän on looginen tulkinta vapaudesta, mutta voi aiheuttaa hämmennystä jos vapaan (eng. free) tulkitsee ilmaiseksi.
 
-# Vapaalle ohjelmalle hyväksyttävät jakelusäännöt
-On olemassa joitain ohjelman jakeluun liittyviä sääntöjä, esimerkiksi Copyleft, joiden FSF katsoo olevan hyväksyttäviä vapaassa ohjelmassa.
-Pelkistetysti Copyleft tarkoittaa, uudelleenjaettessa ohjelmaa sen keskeisiä vapauksia ei saa rajoittaa.
+Tämän tulkinnan taustalla on myös tavoita levittää vapaata ohjelmaa ja lopulta saada se korvaamaan ei-vapaat vaihtoehdot. Tämän toteutuminen on mahdotonta, jos vapaata ohjelmaa ei saa käyttää kaupallisesti.
 
-# Vapaan ohjelman määritelmä käytännössä
+### Vapaalle ohjelmalle hyväksyttävät jakelusäännöt
+On olemassa joitain ohjelman jakeluun liittyviä sääntöjä, esimerkiksi Copyleft, joiden FSF katsoo olevan hyväksyttäviä vapaassa ohjelmassa.
+Pelkistetysti Copyleft tarkoittaa, että uudelleenjaettessa ohjelmaa sen keskeisiä vapauksia ei saa rajoittaa.
+
+Myös säännöt ohjelman uudelleenjakelusta, kuten kielto julkaista muokattua versiota samalla nimellä, ovat hyväksyttäviä, jos ne eivät oleellisesti rajoita vapautta julkaista tai rakentaa muokattuja versioita.
+
+### Vapaan ohjelman määritelmä käytännössä
 Kriteerien tulkitseminen vapaalle ohjelmalle edellyttää tarkkaa harkintaa ja  FSF katsoo, että ohjelman on noudatettava vapaan ohjelman periaatteita myös hengessä tarkoin määriteltyjen sääntöjen lisäksi.
 
-# Vapaan softan tuolla puolen
+### Vapaan softan tuolla puolen
 FSF:n mukaan myös vapaan ohjelmiston manuaalien on oltava vapaita, koska ne ovat de facto osa ohjelmistoa.
-Vapaan ohjelman määritelmän joi jatkaa samoilla periaatteilla kattamaan ohjelmien ulkopuolisia asioita.
+Vapaan ohjelman määritelmän voi myös jatkaa samoilla periaatteilla kattamaan ohjelmien ulkopuolisia asioita.
 
-FSF määrittää vapaan ohjelmiston ohjelmistoksi, jota voi ajaa, muokata, tutkia, kopioida, ja julkaista haluamallaan tavalla.
-Edellytys tälle on pääsy lähtekoodiin.
+## a) Asenna Linux virtuaalikoneeseen
 
-
-### a) Asenna Linux virtuaalikoneeseen
-
-Ympäristö: Windows 11 Education käyttöjärjestelmä, AMD Ryzen 3900XT prosessori, 32GB muistia
+Ympäristö: Windows 11 Education 23H2 käyttöjärjestelmä, AMD Ryzen 3900XT prosessori, 32GB muistia
 
 Latasin VirtualBox 7.0.20 exen ja Debian live 12.6.0 imagen koneelle.
 Lähdin asentamaan VirtualBoxia kaikilla ominaisuuksilla. Keskeytin ensimmäisen asennuksen asentaakseni puuttuvat riippuvuudet Python tukeen.
@@ -76,7 +76,7 @@ Testitulokset:
 
 ![Benchmark Results](h1_x4_benchmark_results.png)
 
-Yhteenvetona voin todeta, etten osaa tulkita testituloksia, mutta koska virtuaalikone tai sitä pyörittävä pöytäkone eivät kaatuneet, pidän sitä onnistuneena.
+Yhteenvetona voin todeta, etten osannut tulkita testituloksia, mutta koska virtuaalikone tai sitä pyörittävä pöytäkone eivät kaatuneet, pidin sitä onnistuneena.
 
 
 ## Lähteet
