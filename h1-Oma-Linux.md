@@ -1,6 +1,25 @@
 # h1 Oma Linux
 
-### x) FSF Free Software Definition
+# x) FSF Free Software Definition
+
+Free Software Foundation määrittää vapaan ohjelmiston ohjelmistoksi, jota voi ajaa, muokata, tutkia, kopioida, ja julkaista haluamallaan tavalla.
+Edellytys tälle on pääsy lähtekoodiin.
+
+# Vapaan ohjelman kaupallisuus
+
+Oikeus käyttää ohjelmaa kaupallisesti on turvattava tai se ei ole vapaa ohjelma.
+Tämän on looginen tulkinta vapaudesta, mutta voi aiheuttaa hämmennystä jos vapaan (eng. free) tulkitsee ilmaiseksi.
+
+# Vapaalle ohjelmalle hyväksyttävät jakelusäännöt
+On olemassa joitain ohjelman jakeluun liittyviä sääntöjä, esimerkiksi Copyleft, joiden FSF katsoo olevan hyväksyttäviä vapaassa ohjelmassa.
+Pelkistetysti Copyleft tarkoittaa, uudelleenjaettessa ohjelmaa sen keskeisiä vapauksia ei saa rajoittaa.
+
+# Vapaan ohjelman määritelmä käytännössä
+Kriteerien tulkitseminen vapaalle ohjelmalle edellyttää tarkkaa harkintaa ja  FSF katsoo, että ohjelman on noudatettava vapaan ohjelman periaatteita myös hengessä tarkoin määriteltyjen sääntöjen lisäksi.
+
+# Vapaan softan tuolla puolen
+FSF:n mukaan myös vapaan ohjelmiston manuaalien on oltava vapaita, koska ne ovat de facto osa ohjelmistoa.
+Vapaan ohjelman määritelmän joi jatkaa samoilla periaatteilla kattamaan ohjelmien ulkopuolisia asioita.
 
 FSF määrittää vapaan ohjelmiston ohjelmistoksi, jota voi ajaa, muokata, tutkia, kopioida, ja julkaista haluamallaan tavalla.
 Edellytys tälle on pääsy lähtekoodiin.
