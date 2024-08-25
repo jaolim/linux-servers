@@ -19,11 +19,11 @@ Lähdin asentamaan VirtualBoxia kaikilla ominaisuuksilla. Keskeytin ensimmäisen
 
 Asensin puuttuvat riippuvuudet ja asensin VirtualBoxin kaikilla ominaisuuksilla.
 
-Tein uuden Virtuaalikoneen VirtualBoxiin seuraavilla asetuksilla:
+Tein uuden virtuaalikoneen VirtualBoxiin seuraavilla asetuksilla:
 
 ![Virtual Machine](3_virtual_machine.png)
 
-Boottasin Debianin live version ja testasin hiiren, näppäimistön ja internet yhteyden toimimisen, sekä ajoin yksinkertaisen komennon shellissä.
+Boottasin Debianin live version ja varmistin hiiren, näppäimistön ja internet yhteyden toimivuuden, sekä ajoin yksinkertaisen komennon shellissä.
 
 ![Shell](5_hello_debian.png)
 
