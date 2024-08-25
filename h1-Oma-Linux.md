@@ -23,7 +23,7 @@ Tein uuden Virtuaalikoneen VirtualBoxiin seuraavilla asetuksilla:
 
 ![Virtual Machine](3_virtual_machine.png)
 
-Boottasin Debianin live version ja testasin hiiren, näppäimistän ja internet yhteyden toimimisen, sekä ajoin yksinkertaisen komennon shellissä.
+Boottasin Debianin live version ja testasin hiiren, näppäimistön ja internet yhteyden toimimisen, sekä ajoin yksinkertaisen komennon shellissä.
 
 ![Shell](5_hello_debian.png)
 
@@ -37,6 +37,28 @@ Boottasin virtuaalikoneen ja varmistin koneen speksien olevan oikein.
 
 Prosessissa meni kokonaisuudessaan 1h 10min ja ainoa vastaan tullut ongelma oli puuttuva riippuvuus virtualboxin hallinnointiin Python scripteillä (todennäköisesti turha ominaisuus, mutta asensimpa kuitenkin), jonka selvittäminen tapahtui parissa minuutissa.
 
+## x)Vapaaehtoinen bonus: suosikkiohjelmani Linuxilla. Tee ja raportoi jokin yksinkertainen toimenpide haluamallasi Linux-ohjelmalla.
+
+Hain Googlesta tietoa Linux CPU testeistä ja päädyin Sysbench ohjelmaan.
+
+Sysbench install:
+
+![Sysbench Install](h1_x1_sysbench_install.png)
+
+Sysbench manuaali (man sysbench komento):
+
+![Sysbench Manual](h1_x2_sysbench_manual.png)
+
+Testin asetukset (neljän loogisen ytimen testi):
+
+![Benchmark Parameters](h1_x3_benchmark_parameters.png)
+
+Testitulokset:
+
+![Benchmark Results](h1_x4_benchmark_results.png)
+
+Yhteenvetona voin todeta, etten osaa tarkemmin tulkita testituloksia, mutta koska virtuaalikone tai pyörittänyt pöytäkone eivät kaatuneet, joten pidän sitä onnistuneena.
+
 
 ## Lähteet
 Tehtävä: https://terokarvinen.com/linux-palvelimet/#h1-oma-linux
@@ -46,3 +68,5 @@ Ohjeet: https://terokarvinen.com/2021/install-debian-on-virtualbox/
 Debian image: https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-12.6.0-amd64-xfce.iso
 
 VirtualBox lataussivu: https://www.virtualbox.org/wiki/Downloads
+
+Sysbench benchmark ohjelma: https://github.com/akopytov/sysbench
