@@ -40,7 +40,7 @@ FSF:n mukaan myös vapaan ohjelmiston manuaalien on oltava vapaita, koska ne ova
 Vapaan ohjelman määritelmän voi myös jatkaa samoilla periaatteilla kattamaan ohjelmien ulkopuolisia asioita.
 
 ## a) Asenna Linux virtuaalikoneeseen
-Tähtävä suoritettuun Tero Karvasin 2023 asennusohjeita noudattaen. Prosessissa meni kokonaisuudessaan 1h 10min ja ainoa vastaan tullut ongelma oli puuttuva riippuvuus virtualboxin hallinnointiin Python scripteillä (todennäköisesti turha ominaisuus, mutta asensimpa kuitenkin), jonka selvittäminen tapahtui muutamassa minuutissa.
+Tähtävä suoritettiin Tero Karvasin 2023 asennusohjeita noudattaen. Prosessissa meni kokonaisuudessaan 1h 10min ja ainoa vastaan tullut ongelma oli puuttuva riippuvuus VirtualBoxin hallinnointiin Python scripteillä (todennäköisesti turha ominaisuus, mutta asensimpa kuitenkin), jonka selvittäminen tapahtui muutamassa minuutissa.
 
 Ympäristö: 
 - Käyttöjärjestelmä: Windows 11 Education 23H2
