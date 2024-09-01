@@ -219,6 +219,8 @@ Karvinen, Tero. 2020. Command Line Basics Revisited. https://terokarvinen.com/20
 
 Karvinen, Tero. 2024. h2 Komentaja Pingviini. https://terokarvinen.com/linux-palvelimet/#h2-komentaja-pingviini
 
+tldr projektin github sivu: https://github.com/tldr-pages/tldr
+
 Karvinen, Tero. 2022. Micro-jump. https://github.com/terokarvinen/micro-jump
 
 ## Lisenssi
