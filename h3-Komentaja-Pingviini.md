@@ -77,7 +77,7 @@ Käytetty aika: 34 minuuttia. ~10 minuuttia tiedonhakuun Linux CLI ohjelmista, ~
 
 Päädyin ohjelmiin Wget, lshw ja tldr. Wget ja lshw tulivat vastaan viikon materiaalissa ja tldr:en löysin googlettamalla Linuxiin suositeltuja CLI ohjelmia.
 
-Wget on ei-interaktiivinen ohjelma tiedostojen lataamiseen netistä, lshw on työkalu koneen rauta-informaation selvittämiseen ja tldr (too long; didn't read) on yhteysövoimin ylläpidetty ohjelma, joka tarjoaa lyhennetyt ja `man` komentoa helpommin luettavat manuaalisvut eri ohjelmille
+Wget on ei-interaktiivinen ohjelma tiedostojen lataamiseen netistä, lshw on työkalu koneen rauta-informaation selvittämiseen ja tldr (too long; didn't read) on yhteysövoimin ylläpidetty ohjelma, joka tarjoaa lyhennetyt ja `man` komentoa helpommin luettavat manuaalisivut eri ohjelmille.
 
 Varmistin kaikkien löytymisen `apt-cache search` komennoilla. Ajoin `sudo apt-get install wget lshw tldr` ja hyväksyin tarvittavien riippuvuuksien asennuksen promptatessa.
 
@@ -104,7 +104,7 @@ Home (/home/) kansio sisältää kaikkien käyttäjien kotikansiot.
 
 ![Home](h2_c2_home.png)
 
-Janne (/home/janne) kansi on janne nimisen käyttäjän kotikansio.
+Janne (/home/janne/) kansi on janne nimisen käyttäjän kotikansio.
 
 ![Janne](h2_c3_janne.png)
 
@@ -141,7 +141,7 @@ Tämän jälkeen ajoin `grep man` ja navigoin kyseiselle sivulle.
 
 ![Grep Conxtext Line Control](h2_d4_man_grep.png)
 
-Tulosting tiedoston testing.txt sisällön komennolla `cat testing.txt`, jonka jälkeen tulostin rivejä muutamalla grepin -E (extended-regexp) komennon parametrilla.
+Tulostin tiedoston testing.txt sisällön komennolla `cat testing.txt`, jonka jälkeen tulostin rivejä muutamalla grepin -E (extended-regexp) komennon parametrilla.
 
 ![Grep Regex](h2_d5_grep_regex.png)
 
@@ -160,7 +160,7 @@ Uudelleenohjasin annetun komennon tulosteen tiedostoon hardware.txt ja tulostin 
 
 ![Hardware](h2_f1_hardware.png)
 
-Osasta laitteista, kuten prosessori, näkee virtuaalinen Linux alle pyörivän raudan mallin, mutta valtaosa näkyy virtualboxin tarjoamina virtualisointeina. Muistissa ja kovalevytilassa näkyvät vain virutaalikoneelle allokoidut määrät. Ajaessa `lscpu` komennon näkyy myös prosessorin osalta ytimien määrän myös oikein. Tarkemmin en osaa tulkita tuloksia.
+Osasta laitteista, kuten prosessori, näki virtuaalinen Linux alle pyörivän raudan mallin, mutta valtaosa näkyi virtualboxin tarjoamina virtualisointeina. Muistissa ja kovalevytilassa näkyivät vain virutaalikoneelle allokoidut määrät. Ajaessa `lscpu` komennon näkyi myös prosessorin osalta ytimien määrän myös oikein. Tarkemmin en osannut tulkita tuloksia.
 
 ## g) Vapaaehtoinen: Valitse muutama rivi lokeista. Tulkitse ja analysoi.
 Ajankäyttö: 10 minuuttia. ~5 minuuttia tehtävään ja ~5 minuuttia kuvankaappauksiin ja raporttiin.
