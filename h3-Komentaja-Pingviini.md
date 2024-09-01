@@ -176,7 +176,7 @@ Tämän jälkeen yritin lukea yhtä .journal tiedostoa catillä ja totesin, ette
 ## h) Vapaaehtoinen: Asenna jokin plugin micro-editorille ja kokeile sitä. Vaikkapa palettero, cheat tai runit.
 Ajankäyttö: 56 minuuttia. ~20 minuuttia tiedonhakuun plugineista, ~5 minuuttia pluginin testeihin toimivilla asetuksilla, ~25 minuuttia vianselvitykseen MarkDowniin liittyvässä ongelmatilanteessa, ~6 kuvankaappauksiin ja raporttiin.
 
-Asensin ensin jump pluginin tarvitsemat riippuvuudet, jonka jälkeen tein jumptest.md tiedoston MarkDown navigoinnin testaamiseksi.
+Asensin ensin jump pluginin tarvitsemat riippuvuudet ja itse jump pluginin komennoilla `$ sudo apt-get -y install micro fzf exuberant-ctags` ja `$ micro --plugin install jump`, jonka jälkeen tein jumptest.md tiedoston MarkDown navigoinnin testaamiseksi.
 
 ![MarkDown](h2_h1_markdown.png)
 
@@ -199,7 +199,7 @@ Projektin githubissa annettu komento `$ cp -nv $HOME/.config/micro/plug/micro-ju
 ![Troubleshooting 1](h2_h5_markdown_troubleshooting1.png)
 ![Troubleshooting 2](h2_h6_markdown_troubleshooting2.png)
 
-Kopioituani tiedoston onnistuneesti katselin sisältöä `cat` komentoa käyttäen.
+Kopioituani tiedoston onnistuneesti katselin sisältöä `cat .ctags` komentoa käyttäen.
 
 ![Troubleshooting 3](h2_h6_markdown_troubleshooting3.png)
 
