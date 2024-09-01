@@ -5,7 +5,6 @@ Teksti on tiivistetty Tero Karvisen 2020 artikkelista Command Line Basics Revisi
 
 Linuxissa käytetty komentorivi on kätevä, nopea, ilmaisuvoimainen ja helposti automatisoitava.
 
-
 ## Muutamia komentoja kategorioittain
 ### Liikkuminen ja katselu
 Komentorivia käytettäessä ollaan aina jossain kansiossa. Tämänhetkistä kansiota kutsutaan työskentelykansioksi (working directory).
@@ -96,6 +95,7 @@ Katsoin lshw:n tldr sivun `tldr lshw` komennolla ja nappasin sieltä komennon `s
 
 ## c) FHS. Esittele kansiot, jotka on listattu "Command Line Basics Revisited" kappaleessa "Important directories". Näytä kuvaava esimerkki kunkin tärkeän kansion sisältämästä tiedostosta tai kansiosta. Jos kyseessä on tiedosto, näytä siitä kuvaava esimerkkirivi. Työskentele komentokehotteessa ja näytä komennot, joilla etsit esimerkit.
 Käytetty aika: 23 minuuttia. ~10 minuuttia tehtävään, ~13 minuuttia kuvakaappauksiin ja raporttiin.
+
 Juurikansio (/) on järjestelmän ylin kansio, jonka alta kaikki muut löytyvät.
 
 ![Root](h2_c1_root.png)
