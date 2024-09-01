@@ -1,4 +1,4 @@
-# h3 Komentaja Pingviini
+# h2 Komentaja Pingviini
 
 ## Komentorivin perusteet
 Teksti on tiivistetty Tero Karvisen 2020 artikkelista Command Line Basics Revisited
