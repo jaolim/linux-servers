@@ -60,7 +60,7 @@ Siispä `$ sudo apt-get update`, joka päivittää listan saatavilla olevista pa
 - RAM: 8GB
 - Kiintolevy: 200 GB
 
-Tehtäviä suoritteassani minulla oli ajastin pyörimässä, mutta tähtävän sisällä eri osioihin käytetty aika on ainoastaan rehellinen arvioni, koska tarkempaa mittausta en tehnyt.
+Tehtäviä suoritteassani minulla oli ajastin pyörimässä, mutta osioiden sisällä eri asiohin käytetty aika on ainoastaan rehellinen arvioni, koska tarkempaa mittausta en tehnyt.
 
 ## a) Micro. Asenna micro-editori.
 Käytetty aika: 12 minuuttia. ~5 minuuttia tehtävään ja ~7 minuuttia raporttiin sekä kuvakaappauksiin.
