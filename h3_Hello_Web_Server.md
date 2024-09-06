@@ -71,7 +71,8 @@ Ensimmäinen rivi: `127.0.0.1 - - [06/Sep/2024:18:20:32 +0300] "GET / HTTP/1.1" 
 - `-` Puuttuva tieto clientistä (userid HTTP authentication määrittelemänä)
 - `[06/Sep/2024:18:20:32 +0300]` Pyynnön saapumishetki 
 - `"GET` Clientin käyttämä metodi
-- `/` Pyydetty resurssi `HTTP/1.1"` Clientin käyttämä protokolla
+- `/` Pyydetty resurssi
+- `HTTP/1.1"` Clientin käyttämä protokolla
 - `200` Palvelimen palauttama statuskoodi (200=OK)
 - `3380` Lähetyksen koko biteissä
 - `"-"` Puuttuva tieto (Sivu, jolta client on ohjattu)
