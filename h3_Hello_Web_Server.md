@@ -35,7 +35,7 @@ Askeleet virtual hostin tekemiseen apache2 palvelimella (käyttäen xubuntu käy
 </VirtualHost>
 ```
 - Tee webbisivu normaalikäyttäjänä DocumentRootissa määriteltyyn polkuun
-- Testaa webbisivua
+- Testaa webbisivua `curl -H 'Host: pyora.example.com' localhost`
 
 Oikeassa elämässä sivun nimi vuokrattaisiin palveluntarjoajalta, mutta harjoituskäytössä voidaan käydä muokkaamassa `etc/hosts`.
 
