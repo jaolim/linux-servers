@@ -110,7 +110,7 @@ Tässä kohtaan luin tehtävänannon uudestaan, ja tajusin, että tarkoituksena 
 Aikaisempia askeleita seuraten loin uuden virtual hostin ja tein oikeaan polkurakenteeseen uuden index.html tiedoston.
 
 ![Virtual Host 2](h3_c5_vh2.png)
-*Kuvattu Virtual Hostin asetustiedosto, sivun sisällön käyttäjäoidet(voi muokata peruskäyttäjänä) ja sivu avattuna webbiselaimessa.*
+*Kuvattu Virtual Hostin asetustiedosto, sivun sisällön käyttäjäoidet(omistajalla luku ja kirjoitusoikeudet) ja sivu avattuna webbiselaimessa.*
 
 Luin vielä tarkemmin tehtävän antoa ja kävin tekemässä ohi hypätyn askeleen "laita vanhat pois päältä" deaktivoimalla oletussivun.
 
