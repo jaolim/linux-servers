@@ -17,7 +17,7 @@
 ## x) Lue ja tiivistä: [Name-based Virtual Host Support](https://httpd.apache.org/docs/2.4/vhosts/name-based.html), [Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/)
 Toisin kuin IP-pohjaisessa virtuaalihostissa, jossa yksi host on sidottu yhteen IP-osoitteeseen, voi nimi pohjainen virtual host voi pitää useita eri hosteja samassa IP-osoitteessa ohjaten liikenteen oikeaan hostiin http headerin nimitiedon perusteella.
 
-VirtualHost tulee luoda jokaiselle hostille, jota palvelimen on tarkoitus palvella ja niille täytyy vähintään määritellä `ServerName` hostin tunnistamiseksi ja `DocumentRoot` hostin sisällön sijainnin määrittämiseksi. 
+VirtualHost tulee luoda jokaiselle hostille, jota palvelimella on tarkoitus pitää ja niille täytyy vähintään määritellä `ServerName` hostin tunnistamiseksi ja `DocumentRoot` hostin sisällön sijainnin määrittämiseksi. 
 
 Askeleet virtual hostin tekemiseen apache2 palvelimella:
 - Asenna apache ja korvaa oletusetusivu polussa `/var/www/html/index.html`
