@@ -24,6 +24,7 @@ Askeleet virtual hostin tekemiseen apache2 palvelimella (käyttäen xubuntu käy
 - Lisää uusi nimi pohjainen virtual host polkuun: `/etc/apache2/sites-available/pyora.example.com.conf`
 
 ```
+#.conf tiedoston sisältö
 <VirtualHost *:80>
   ServerName pyora.example.com
   ServerAlias www.pyora.example.com
