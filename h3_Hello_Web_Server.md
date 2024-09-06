@@ -19,7 +19,7 @@ Toisin kuin IP-pohjaisessa virtuaalihostissa, jossa yksi host on sidottu yhteen 
 
 VirtualHost tulee luoda jokaiselle hostille, jota palvelimella on tarkoitus pitää ja niille täytyy vähintään määritellä `ServerName` hostin tunnistamiseksi ja `DocumentRoot` hostin sisällön sijainnin määrittämiseksi. 
 
-Askeleet virtual hostin tekemiseen apache2 palvelimella:
+Askeleet virtual hostin tekemiseen apache2 palvelimella (käyttäen xubuntu käyttäjää ja pyora.example.com sivua esimkerkeissä):
 - Asenna apache ja korvaa oletusetusivu polussa `/var/www/html/index.html`
 - Lisää uusi nimi pohjainen virtual host polkuun: `/etc/apache2/sites-available/pyora.example.com.conf`
 
