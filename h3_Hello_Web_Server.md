@@ -14,13 +14,26 @@
 > - RAM: 8GB
 > - Kiintolevy: 200 GB
 
-## x) Lue ja tiivistä: [Name-based Virtual Host Support](https://httpd.apache.org/docs/2.4/vhosts/name-based.html) [Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/)
-Toisin kuin IP-pohjaisessa virtuaalihostissa, jossa yksi host on sidottu yhteen IP-osoitteeseen, voi nimi pohjainen virtual host voi pitää useita eri hosteja samassa IP-osoitteessa ohjaten liikenteen oikeaan hostiin HTTP headerin nimitiedon perusteella.
+## x) Lue ja tiivistä: [Name-based Virtual Host Support](https://httpd.apache.org/docs/2.4/vhosts/name-based.html), [Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address](https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/)
+Toisin kuin IP-pohjaisessa virtuaalihostissa, jossa yksi host on sidottu yhteen IP-osoitteeseen, voi nimi pohjainen virtual host voi pitää useita eri hosteja samassa IP-osoitteessa ohjaten liikenteen oikeaan hostiin http headerin nimitiedon perusteella.
 
-Askeleet apache2 serverin asennukseen:
-- Asenna apache ja korvaa oletusetusivu
-- Lisää uusi nimi pohjainen virtual host
-- Tee webbisivu normaalikäyttäjänä
+VirtualHost tulee luoda jokaiselle hostille, jota palvelimen on tarkoitus palvella ja niille täytyy vähintään määritellä `ServerName` hostin tunnistamiseksi ja `DocumentRoot` hostin sisällön sijainnin määrittämiseksi. 
+
+Askeleet virtual hostin tekemiseen apache2 palvelimella:
+- Asenna apache ja korvaa oletusetusivu polussa `/var/www/html/index.html`
+- Lisää uusi nimi pohjainen virtual host polkuun: `/etc/apache2/sites-available/pyora.example.com.conf`
+
+```
+<VirtualHost *:80>
+  ServerName pyora.example.com
+  ServerAlias www.pyora.example.com
+  DocumentRoot /home/xubuntu/publicsites/pyora.example.com
+  <Directory /home/xubuntu/publicsites/pyora.example.com>
+    Require all granted
+  </Directory>
+</VirtualHost>
+```
+- Tee webbisivu normaalikäyttäjänä DocumentRootissa määriteltyyn polkuun
 - Testaa webbisivua
 
 Oikeassa elämässä sivun nimi vuokrattaisiin palveluntarjoajalta, mutta harjoituskäytössä voidaan käydä muokkaamassa `etc/hosts`.
@@ -168,5 +181,7 @@ Apache. Name-based Virtual Host Support. https://httpd.apache.org/docs/2.4/vhost
 Apache. Log Files. https://httpd.apache.org/docs/current/logs.html
 
 Geeks for Geeks. Http headers. https://www.geeksforgeeks.org/http-headers/
+
+Mozilla. HTTP headers. https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
 
 w3 schools. Html validator. https://validator.w3.org
