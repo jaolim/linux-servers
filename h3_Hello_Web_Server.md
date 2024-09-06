@@ -131,10 +131,10 @@ Korjasin molemmat validoijan huomautukset, vaikka kielen merkkaus noin lyhyessä
 ![Fixed](h3_e2_fixed.png)![Fixed](h3_e3_fixed2.png)
 
 ### f) Anna esimerkit 'curl -I' ja 'curl' -komennoista. Selitä 'curl -I' muutamasta näyttämästä otsakkeesta (response header), mitä ne tarkoittavat.
-Käytetty aika: 1h 12min, ~10 min curl manuaalin luku, ~10 min logien hakeminen, ~20 min http header dokumentaation luku yleisellä tasolla, ~30 min logien kirjoittaminen auki ja siihen liitynyt tiedonhaku.
+Käytetty aika: 1h 12min, ~10 min curl manuaalin luku, ~10 min logien hakeminen, ~20 min http header dokumentaation luku yleisellä tasolla, ~30 min logien kirjoittaminen auki ja siihen liittynyt tiedonhaku.
 
 Aloitin hakemalla Curlin tldr sivun (tldr on ohjelma, joka tarjoaa lyhennetyt manuaalisivut monille ohjelmille, `sudo apt-get tldr` jos kiinnostaa).
-Tämän selattuani loin uuden tiedoston komennolla `touch indexCopy.html` ja uudelleenohjasin sinne aikaisemmassa tehtävässä tekemäni sivun sisällän komennolla `curl localhost >> indexCopy.html`, jonka jälkeen vielä varmistin kopioinnin onnistuneen komennolla `cat indexCopy.html`.
+Tämän selattuani loin uuden tiedoston komennolla `touch indexCopy.html` ja uudelleenohjasin sinne aikaisemmassa tehtävässä tekemäni sivun sisällön komennolla `curl localhost >> indexCopy.html`, jonka jälkeen vielä varmistin kopioinnin onnistuneen komennolla `cat indexCopy.html`.
 
 ![Curl TLDR](h3_f1_curl_tldr.png)
 
@@ -144,11 +144,11 @@ Tldr:stä ei tällä kertaa ollut juurikaan apua, joten hain -I komennon curlin 
 
 Kuten kuvaus kertoo, hakee `curl -I` ainoastaan kohdesivun HTTP headerit. Nämä ovat merkkijonoja, joilla client ja palvelin vaihtavat tietoa keskenään ja jotka tyypillisesti eivät näy loppukäyttäjälle
 
-Komennolla `curl -I https://terokarvinen.com/linux-palvelimet/ >> headers.txt` sain listan kurssivun antamista response headereistä tekstitiedostossa, josta ne oli helppo kopioida eteenpäin.
+Komennolla `curl -I https://terokarvinen.com/linux-palvelimet/ >> headers.txt` sain listan kurssisivun antamista response headereistä tekstitiedostossa, josta ne oli helppo kopioida eteenpäin.
 
 ![Headers](h3_f3_headers.png)
 
-Tulkisemisen tueksi kaivoin [Geeks for Geeksin artikkelin http headers](https://www.geeksforgeeks.org/http-headers/) ja [Mozillan developer sivun](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/).
+Tulkisemisen tueksi kaivoin [Geeks for Geeksin artikkelin http headereistä](https://www.geeksforgeeks.org/http-headers/) ja [Mozillan developer sivun](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/).
 - `HTTP/1.1 200 OK` Onnistunut vastaus HTTP/1.1 protokollaa käyttäen.
 - `Date: Fri, 06 Sep 2024 19:34:16 GMT` Vastauksen aika.
 - `Server: Apache/2.2.14 (Ubuntu)` Sivuston palvelimen malli.
@@ -185,4 +185,4 @@ Geeks for Geeks. Http headers. https://www.geeksforgeeks.org/http-headers/
 
 Mozilla. HTTP headers. https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
 
-w3 schools. Html validator. https://validator.w3.org
+W3C. Html validator. https://validator.w3.org
