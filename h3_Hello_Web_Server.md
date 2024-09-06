@@ -76,15 +76,14 @@ Ensimmäinen rivi: `127.0.0.1 - - [06/Sep/2024:18:20:32 +0300] "GET / HTTP/1.1" 
 - `200` Palvelimen palauttama statuskoodi (200=OK)
 - `3380` Lähetyksen koko biteissä
 - `"-"` Puuttuva tieto (Sivu, jolta client on ohjattu)
-- `"Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
-- ` User-Agent HTTP request header eli tietoa käyttäjän ympäristöstä
+- `"Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"` User-Agent HTTP request header eli tietoa käyttäjän ympäristöstä
 
 Toinen rivi (vain erot avattu tarkemmin): `127.0.0.1 - - [06/Sep/2024:18:20:32 +0300] "GET /icons/openlogo-75.png HTTP/1.1" 200 6041 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"`
 - `/icons/openlogo-75.png` Pyydetty resurssi (kuva logosta) 
 - `6041` Lähetyksen koko (suurempi kuin muu sivu kokonaisuudessaan)
 - `"http://localhost/"` Sivu, jolta client on ohjattu
 
-Yhteydenotto sivuun aiheutti kaksi tapahtumaa, joissa olivat pääosin identtiset tiedot clientistä. Ensimmäinen oli sivun lataus ja toinen sivulla olevan <img></img> tageillä ympäröidyn kuvan lataus, jossa sivu toimi itse referoijana.
+Yhteydenotto sivuun aiheutti kaksi tapahtumaa, joissa olivat pääosin identtiset tiedot clientistä. Ensimmäinen oli sivun lataus ja toinen sivulla olevan `<img></img>` tageillä ympäröidyn kuvan lataus, jossa sivu toimi itse referoijana.
 
 ### c) Etusivu uusiksi. Tee uusi name based virtual host. Sivun tulee näkyä suoraan palvelimen etusivulla http://localhost/. Sivua pitää pystyä muokkaamaan normaalina käyttäjänä, ilman sudoa. Tee uusi, laita vanhat pois päältä. Uusi sivu on hattu.example.com, ja tämän pitää näkyä: asetustiedoston nimessä, asetustiedoston ServerName-muuttujassa sekä etusivun sisällössä (esim title, h1 tai p).
 Ajankäyttö: 1h 10min, ~20min dokumentaation lukemiseen, ~30 min ensimmäisen sivun kirjoittamiseen ja konfigurointiin, ~20 puuttuineiden vaiheiden tekemiseen.
