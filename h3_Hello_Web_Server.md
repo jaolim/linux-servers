@@ -185,4 +185,7 @@ Geeks for Geeks. Http headers. https://www.geeksforgeeks.org/http-headers/
 
 Mozilla. HTTP headers. https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
 
+## Lisenssi
+Sivun sisältöä saa levittää GPL-3.0 lisenssin sallimin ehdoin: https://github.com/jaolim/linux-servers?tab=GPL-3.0-1-ov-file#readme
+
 W3C. Html validator. https://validator.w3.org
