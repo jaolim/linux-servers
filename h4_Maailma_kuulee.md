@@ -110,7 +110,7 @@ Sitten avasin uuden terminaalin ja kokeilin kirjautumista jannella.
 Kirjautumisen onnistuttua estin juurikäyttäjänä kirjautumisen ja kirjauduin ulos juurikäyttäjältä.
 
 - `$ sudoedit /etc/ssh/sshd_config` 
-- `PermitRootLogin no`
+- `$ PermitRootLogin no`
 - `$ sudo service ssh restart`
 
 Varmistin vielä, ettei juurikäyttäjänä kirjautuminen onnistu.
@@ -118,8 +118,8 @@ Varmistin vielä, ettei juurikäyttäjänä kirjautuminen onnistu.
 ![Denied](h4_b3_denied.png)
 
 Tämän jälkeen nimesin vielä hostin uudestaan ja ajoin viimeisen päivityskomennon.
-- `sudo hostnamectl set-hostname DebOfNight`
-- `sudo apt-get dist-upgrade`
+- `$ sudo hostnamectl set-hostname DebOfNight`
+- `$ sudo apt-get dist-upgrade`
 
 Otin yhteyden uudestaan varmistaakseni host nimen muuttuneen.
 
