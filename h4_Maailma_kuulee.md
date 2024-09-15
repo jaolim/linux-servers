@@ -96,6 +96,7 @@ Kirjauduin sisään juurikäyttäjänä ja asensin päivitykset sekä palomuurin
 - `$ sudo apt-get upgrade`
 - `$ sudo apt-get install ufw`
 - `$ sudo ufw allow 22/tcp`
+- `$ sudo ufw enable`
 
 Tämän jälkeen loin uuden käyttäjän ja laitoin tämän sudo ryhmään.
 
@@ -128,12 +129,12 @@ Otin yhteyden uudestaan varmistaakseni host nimen muuttuneen.
 
 Asensin Apachen, avasin http pyyntöjen oletusportin ja kokeilin sivun näkyvyyden pöytäkoneeltani webbiselaimessa.
 
-- `sudo apt-get intall apache2`
-- `sudo ufw allow 80/tcp`
+- `$ sudo apt-get intall apache2`
+- `$ sudo ufw allow 80/tcp`
 
 Korvasin oletussivun tekstillä "hi" ja kokeilin sivun toimivan pöytäkoneen selaimella.
 
-- `echo hi | sudo tee /var/www/html/index.html`
+- `$ echo hi | sudo tee /var/www/html/index.html`
 
 ![hi](h4_c1_Connected.png)
 
