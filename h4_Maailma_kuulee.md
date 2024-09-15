@@ -22,14 +22,15 @@ Raportissaan Lehto kuvaa askel askeleelta vaiheet pilvipalvelimen vuokraukseen, 
 a) Pilvipalvelimen vuokraus ja asennus
 - Valitse palveluntarjoaja ja rekisteröidy (DigitalOcean).
 - Valitse maksutapa ja aktivoi haluamasi laskutushälytykset (Github Education krediittitarjous).
-- Valitse uusi virtuaalikone ja määritä, sijainti, speksit ja käyttöjärjestelmä (Amsterdam, $5/kk kone Intelin prosessorilla ja normaalilla SSD levyllä).
+- Valitse uusi virtuaalikone ja määritä sijainti, speksit ja käyttöjärjestelmä (Amsterdam, $5/kk kone Intelin prosessorilla ja normaalilla SSD levyllä).
 - Valitse autentikaatiomenetelmäksi SSH tai salasana (Salasana, koska SSH ei vielä ollut tuttu).
 - Valitse haluamasi lisäominaisuudet (Ei mitään).
 - Määritä koneen hostname (debian).
 - Katso koneen IP-osoite.
 
-Lehto kuvaa vielä domain nimen vuokrausprosessin, mutta koska se on nykyisessä toteutuksessa seuraavan viikon aihetta, jätin tiivistelmän ulkopuolelle.
+Lehto kuvaa vielä domain nimen vuokrausprosessin, mutta koska se on nykyisessä toteutuksessa seuraavan viikon aihetta, jätin sen tiivistelmän ulkopuolelle.
 
+d) Palvelin suojaan palomuurilla
 - Ota palvelimeen SSH etäyhteys juurikäyttäjänä ja syötä palvelimelle määrittelemäsi salasana(`$ ssh root@188.166.4.6`).
 gd) Palvelin suojaan palomuurilla
 - Hae päivitykset (`$ sudo apt-get update`).
@@ -56,7 +57,7 @@ f) Palvelimen ohjelmien päivitys
 ### Tero Karvinen. 2017. [First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS](https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/)
 Artikkeli on pikaohje uuden pilvipalvelimen vuokraukseen ja asentamiseen. Ohjeessa käytetyt palveluntarjoajat DigitalOcean ja NameCheap on valittu, koska ne tarjoavat ilmaisia krediittejä opiskelijoille GitHub Educationin kautta.
 
-- Tee uusi virtuaalinen palvelin DigitalOceaniin ja ota siihen yhteys juurikäyttäjänä ensimmäistä ja viimeistä kertaa (`$ ssh root@10.0.0.1`)
+- Tee uusi virtuaalinen palvelin DigitalOceaniin ja ota siihen yhteys juurikäyttäjänä ensimmäistä ja viimeistä kertaa (`$ ssh root@10.0.0.1`).
 - Anna hyvä salasana.
 - Käynnistä palomuuri (`$ sudo ufw allow 22/tcp` -> `$ sudo ufw enable`).
 - Tee uusi käyttäjä ja tee tästä pääkäyttäjä (`$ sudo adduser tero` -> `$ sudo adduser tero sudo` -> `$ sudo adduser tero adm` -> `$ sudo adduser tero admin`).
@@ -67,13 +68,10 @@ Artikkeli on pikaohje uuden pilvipalvelimen vuokraukseen ja asentamiseen. Ohjees
 - Vuokraa nimi esimerkiksi NameCheapistä.
 
 ### a) Vuokraa oma virtuaalipalvelin haluamaltasi palveluntarjoajalta. (Vaihtoehtona voit käyttää ilmaista kokeilujaksoa, GitHub Education krediittejä; tai jos mikään muu ei onnistu, voit kokeilla ilmaiseksi vagrant:ia paikallisesti. Suosittelen kuitenkin harjoittelemaan oikeilla, tuotantoon kelpaavilla julkisilla palveluilla).
-Ajankäyttö: ~30 minuuttia.
 
-Käytin [DigitalOceania](https://www.digitalocean.com/) pilvipalveluntarjoajana, koska heillä oli tarjous ilmaiskrediiteistä GitHub Educationin kautta. Rekisteröinnin yhteydessä annoin louttokorttitiedot henkilöllisyyteni varmentamiseksi, jonka jälkeen hain ilmaiskrediitit linkkaamalla GitHub tilini käyttäen [GitHub Educationistä](https://github.com/education) hakemaani yhteistyökumppani linkkiä. Laitoin vielä DigitalOceaniin 2FA autentikaation päälle käyttäen Google Authenticator Android appiä. Nämä askeleet tein ennakkoon varautuakseni käsittelyaikoihin, eikä niitä ole huomioitu ajankäytön seurannassa.
+Käytin [DigitalOceania](https://www.digitalocean.com/) pilvipalveluntarjoajana, koska heillä oli tarjous ilmaiskrediiteistä GitHub Educationin kautta. Rekisteröinnin yhteydessä annoin louttokorttitiedot henkilöllisyyteni varmentamiseksi, jonka jälkeen hain ilmaiskrediitit linkkaamalla GitHub tilini käyttäen [GitHub Educationistä](https://github.com/education) hakemaani yhteistyökumppani linkkiä. Laitoin vielä DigitalOceaniin 2FA autentikaation päälle käyttäen Google Authenticator Android appiä.
 
 ![Credits](h4_a1_credits.png)
-
-*GitHub Education DigitalOceanissa Billing alle*
 
 Varmistettuani krediittien saapuneen lähdin luomaan uutta pilvipalvelinta.
 
@@ -88,22 +86,21 @@ Käynnistin sen ja huomasin unohtaneeni nimeksi oletusarvon. Prosessissa meni no
 ![Running](h4_a4_running.png)
 
 ### b) Tee alkutoimet omalla virtuaalipalvelimellasi: tulimuuri päälle, root-tunnus kiinni, ohjelmien päivitys.
-Ajankäyttö: 
 
-Kirjauduin sisään juurikäyttäjänä ja asensin päivitykset, palomuurin.
+Kirjauduin sisään juurikäyttäjänä ja asensin päivitykset sekä palomuurin.
 
 ![ssh](h4_b1_ssh.png)
 
-`$ ssh root@104.248.140.126`
-`$ sudo apt-get update`
-`$ sudo apt-get upgrade`
-`$ sudo apt-get install ufw`
-`$ sudo ufw allow 22/tcp`
+- `$ ssh root@104.248.140.126`
+- `$ sudo apt-get update`
+- `$ sudo apt-get upgrade`
+- `$ sudo apt-get install ufw`
+- `$ sudo ufw allow 22/tcp`
 
 Tämän jälkeen loin uuden käyttäjän ja laitoin tämän sudo ryhmään.
 
-`$ sudo adduser janne`
-`$ sudo adduser janne sudo`
+- `$ sudo adduser janne`
+- `$ sudo adduser janne sudo`
 
 Sitten avasin uuden terminaalin ja kokeilin kirjautumista jannella.
 
@@ -111,15 +108,19 @@ Sitten avasin uuden terminaalin ja kokeilin kirjautumista jannella.
 
 Kirjautumisen onnistuttua estin juurikäyttäjänä kirjautumisen ja kirjauduin ulos juurikäyttäjältä.
 
-`$ sudoedit /etc/ssh/sshd_config` 
-`PermitRootLogin no`
-`$ sudo service ssh restart`
+- `$ sudoedit /etc/ssh/sshd_config` 
+- `PermitRootLogin no`
+- `$ sudo service ssh restart`
 
 Varmistin vielä, ettei juurikäyttäjänä kirjautuminen onnistu.
 
 ![Denied](h4_b3_denied.png)
 
-Tämän jälkeen nimesin vielä hostin uudestaan ja ajoin viimeisen päivityskomennon `sudo apt-get dist-upgrade`.
+Tämän jälkeen nimesin vielä hostin uudestaan ja ajoin viimeisen päivityskomennon.
+- `sudo hostnamectl set-hostname DebOfNight`
+- `sudo apt-get dist-upgrade`
+
+Otin yhteyden uudestaan varmistaakseni host nimen muuttuneen.
 
 ![DebOfNight](h4_b4_renamed.png)
 
@@ -127,19 +128,31 @@ Tämän jälkeen nimesin vielä hostin uudestaan ja ajoin viimeisen päivityskom
 
 Asensin Apachen, avasin http pyyntöjen oletusportin ja kokeilin sivun näkyvyyden pöytäkoneeltani webbiselaimessa.
 
-`sudo apt-get intall apache2`
-`sudo ufw allow 80/tcp`
+- `sudo apt-get intall apache2`
+- `sudo ufw allow 80/tcp`
 
 Korvasin oletussivun tekstillä "hi" ja kokeilin sivun toimivan pöytäkoneen selaimella.
 
-`echo hi | sudo tee /var/www/html/index.html`
+- `echo hi | sudo tee /var/www/html/index.html`
 
-[hi](h4_c1_connected.png)
+![hi](h4_c1_Connected.png)
 
 Halusin vielä editoida oikean (hyvin pienen) webbisivun, joten asensin micron helpompaan editointiin komennolla `sudo apt-get install micro` ja kirjoitin pienin webbisivun. Varmistin myös sivun näkyvän kännykällä.
 
-[website](h4_c2_website.png)
-
-*Kuvattu ssh yhteydellä hallitulla palvelimella sivu micro editorissa, curl komento paikallisella virtuaalikoneella ja webbisivu avattuna pöytäkoneen selaimessa*
+![website](h4_c2_website.png)
+*Kuvattu ssh yhteydellä hallitulla palvelimella sivu micro editorissa, curl komento paikallisella virtuaalikoneella ja webbisivu avattuna pöytäkoneen selaimessa.*
 
 Kokeilin vielä uuden virtualhostin tekemistä käyttäjän kotihakemistoon, mutta siihen yhdistäessä tuli 403 forbidden virheilmoitusta, ja koska se ei kuulunut tämän viikon tehtävänantoon poistin sen vain käytöstä, enkä lähtenyt selvittämään syitä.
+
+## Lähteet
+Karvinen, T. 2024. H4 Maailma Kuulee. https://terokarvinen.com/linux-palvelimet/#h4-maailma-kuulee
+
+Karvinen, T. 2017. First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS. https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/
+
+Lehto, S. 2022. Teoriasta käytäntöön pilvipalvelimen avulla (h4). https://susannalehto.fi/2022/teoriasta-kaytantoon-pilvipalvelimen-avulla-h4/
+
+Digital Ocean. https://www.digitalocean.com/
+
+Github Education. https://github.com/education
+## Lisenssi
+Sivun sisältöä saa levittää GPL-3.0 lisenssin sallimin ehdoin: https://github.com/jaolim/linux-servers?tab=GPL-3.0-1-ov-file#readme
