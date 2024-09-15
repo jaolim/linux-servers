@@ -145,6 +145,21 @@ Halusin vielä editoida oikean (hyvin pienen) webbisivun, joten asensin micron h
 
 Kokeilin vielä uuden virtualhostin tekemistä käyttäjän kotihakemistoon, mutta siihen yhdistäessä tuli 403 forbidden virheilmoitusta, ja koska se ei kuulunut tämän viikon tehtävänantoon poistin sen vain käytöstä, enkä lähtenyt selvittämään syitä.
 
+Raporttia oikolukiessani huomasin <html> tagien puuttuneen webbisivulta ja korjasin sen muotoon:
+```
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<title>Under construction</title> 
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1 style="color:blue">Greetings!</h1>
+		<p>This is a website.</p>
+	</body>
+</html> 
+```
+
 ## Lähteet
 Karvinen, T. 2024. H4 Maailma Kuulee. https://terokarvinen.com/linux-palvelimet/#h4-maailma-kuulee
 
@@ -155,5 +170,8 @@ Lehto, S. 2022. Teoriasta käytäntöön pilvipalvelimen avulla (h4). https://su
 Digital Ocean. https://www.digitalocean.com/
 
 Github Education. https://github.com/education
+
+Palvelimeni Saksassa: http://104.248.140.126/
+
 ## Lisenssi
 Sivun sisältöä saa levittää GPL-3.0 lisenssin sallimin ehdoin: https://github.com/jaolim/linux-servers?tab=GPL-3.0-1-ov-file#readme
