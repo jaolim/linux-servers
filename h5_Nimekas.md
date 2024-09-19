@@ -77,9 +77,7 @@ Käyttäjät määritellään järjestyksessä omistaja - omistajaryhmä - muut,
 
 Tämä oli lähtötilanne tähän tehtävään.
 
-http://jimmonen.me/~janne/
-
-Koska minulla oli jo käyttäjien kotisivut aktivoituina (`sudo a2enmod userdir`) päätin käyttää siitä ensimmäiseen sivustoon. Varmistin ensin yhteydenoton onnistuvan.
+Koska minulla oli jo käyttäjien kotisivut aktivoituina (`sudo a2enmod userdir`) päätin käyttää sitä ensimmäiseen sivustoon osoitteessa http://jimmonen.me/~janne/. Varmistin ensin yhteydenoton onnistuvan.
 
 ![Empty](h5_a1_empty_works.png)
 
@@ -95,8 +93,7 @@ Lopuksi vielä muokkasin etusivun Home linkin ohjaamaan `http://jimmonen.me` saa
 
 ![Redirection](h5_a4_redirection.png)
 
-http://jimmonen.me
-
+Seuraavan sivun tein osoitteeseen http://jimmonen.me.
 Koska olin jo tehnyt kaksi virtualhostia aikaisemmassa tehtävässä, päätin aluksi kopioida nämä pilvipalvelimelle ja sen jälkeen muokata sivustoihin uudelleenohjauksen.
 
 ![Copy Sites](h5_a5_copy_sites.png)
@@ -112,7 +109,8 @@ Editoin hostit vastaamaan oikeita osoitteita ja korjasin sisällön polkurakente
 Käynnistin hostit ja uudelleenkäynnistin apachen.
 - `$ sudo a2ensite jimmonen.me.conf`
 - `$ sudo a2ensite alisivu.jimmonen.me.conf`
-- `$ sudo systemctl reload apach2`
+- `$ sudo systemctl reload apache2`
+
 Varmistin etusivun toimivuuden ja aloin lisäämään linkit toisille sivuille.
 Tässä kohtaan totesin, ettei toiseen virtual hostiin linkkaaminen ole mielekästä ja kirjoitin vielä kolmannen sivun jimmonen.me kansioon.
 Varmistin sivujen toimivuuden ja validoin ne käyttäen [W3C:n html validoijaa](https://validator.w3.org/)
@@ -171,7 +169,7 @@ Asensin digin (ja joitain muita työkaluja) videossa esitetyllä komennolla `$ s
 
 ![TLDR](h5_d1_tldr.png)
 
-### jimmonen.me, alisivu.jimmonen.me, wildcard.jimmonen.me
+### http://jimmonen.me, http://alisivu.jimmonen.me, http://wildcard.jimmonen.me
 Lähdin sen jälkeen tutkimaan omia sivujani ajamalla parametrittömät host ja dig kyselyt osoitteille jimmonen.me, alisivu.jimmonen.me ja wildcard.jimmonen.me.
 
 Tulokset olivat Namecheapin asetusten mukaisia; jimmonen.me ja alisivu.jimmonen.me viittasivat samaan IP-osoitteeseen ja wildcard oli alias jimmonen.me sivulle.
@@ -190,7 +188,7 @@ Hyödyntäen [uptimia.comin artikkelila kenttien tulkitsesta apuna](https://www.
 - `A` A Record
 - `104.248.140.126` - IP-osoite.
 
-### poe.re
+### https://poe.re
 Path of Exile peli tukee regular expressionia hauissa eri UI elementeissä ja poe.re on kolmannen osapuolen ylläpitämä työkalu hakutermien generointiin. Sivujen statistiikan mukaan siellä oli viimeisen kuukauden aikana ~700k uniikkia vierailijaa.
 
 Peruskyselyllä sain selville poe.re:n IP-osoitteet.
@@ -201,7 +199,7 @@ Käänteisellä kyselyllä selvisi sivuston palvelimen olevan GitHubissa.
 
 ![Poe.re Reverse](h5_d6_poere_reverse.png)
 
-### netflix.com
+### https://netflix.com
 Ajoin samat askeleet netflixille ja huomasin osoitteiden ohjaavan Länsi-Euroopan Amazonin pilvipalvelimiin.
 
 ![Netflix](h5_d7_netflix.png)
@@ -216,7 +214,7 @@ Näissäkin oli eroja, ja kaikki osoitteet erosivat oletusnimipalvelimen antamis
 
 ![Netflix Google DNS any](h5_d10_netflix_google_any.png)
 
-Tästäkään ei löytynyt vastausta siihen, miksi host ja dig tuottivat eri IP:t, mutta yleisesti nopeasti vaihtuvien IP-osoitteiden taustalla 60 sekuntiin määritelty TTL.
+Tästäkään ei löytynyt vastausta siihen, miksi host ja dig tuottivat eri IP:t, mutta yleisesti nopeasti vaihtuvien IP-osoitteiden taustalla 60 sekuntiin määritelty TTL ja oletettavasti suuri käytössä oleva IP avaruus.
 
 A recordin lisäksi kysely tuotti mm. NS (Name Server), MX (Mail Exchange), AAAA(IPv6 A record) kenttiä.
 
