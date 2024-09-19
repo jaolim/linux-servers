@@ -223,6 +223,8 @@ Karvinen, T. 2024. H5 Nimekäs. https://terokarvinen.com/linux-palvelimet/#h5-ni
 
 Namecheap. How to Create a Subdomain for my Domain. https://www.namecheap.com/support/knowledgebase/article.aspx/9776/2237/how-to-create-a-subdomain-for-my-domain/
 
+Shh.com. SSH Copy ID for Copying SSH Keys to Servers. https://www.ssh.com/academy/ssh/copy-id
+
 Tony Teaches Tech. 2021. How To Lookup DNS Records With The dig Command. https://www.youtube.com/watch?v=iESSCDnC74k
 
 Uptimia.com. What Do The Five Fields In A Dig Query's Answer Section Mean?. 2024. https://www.uptimia.com/questions/what-do-the-five-fields-in-a-dig-querys-answer-section-mean
