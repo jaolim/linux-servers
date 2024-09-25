@@ -42,7 +42,10 @@ Testasin vielä ettei salasanakirjautuminen onnistu Windows koneeni command prom
 ![Password Denied](h5_c3_password_denied.png)
 
 *UPDATE 25.09.2024.*
+
 Huomasin seuraavalla tunnilla tehtäviä läpikäydessä, että kirjautuminen epäonnistui väärin kirjoitetun salasanan takia, eikä salasanakirjautumista ollut oikeasti poistettu. Hakemalla googlesta [linuxquestions.org keskustelufoorumilta ohjeen](https://www.linuxquestions.org/questions/slackware-14/sshd-pam-how-to-disable-password-authentication-4175693577/) lisätä `AuthenticationMethods 'publickey'` ssh config tiedostoon. Katsoin vielä [dokumentaatiosta ohjeen vaikuttavan järkevästä](https://man.openbsd.org/sshd_config#AuthenticationMethods) ja kokeilin sitä, jonka jälkeen salasanakirjautuminen ei enää toiminut.
+
+*UPDATE end*
 
 ![Denied 2](h5_c5_denied2.png)
 
