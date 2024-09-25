@@ -45,9 +45,9 @@ Testasin vielä ettei salasanakirjautuminen onnistu Windows koneeni command prom
 
 Huomasin seuraavalla tunnilla tehtäviä läpikäydessä, että kirjautuminen epäonnistui väärin kirjoitetun salasanan takia, eikä salasanakirjautumista ollut oikeasti poistettu. Hakemalla googlesta [linuxquestions.org keskustelufoorumilta ohjeen](https://www.linuxquestions.org/questions/slackware-14/sshd-pam-how-to-disable-password-authentication-4175693577/) lisätä `AuthenticationMethods 'publickey'` ssh config tiedostoon. Katsoin vielä [dokumentaatiosta ohjeen vaikuttavan järkevästä](https://man.openbsd.org/sshd_config#AuthenticationMethods) ja kokeilin sitä, jonka jälkeen salasanakirjautuminen ei enää toiminut.
 
-*UPDATE end*
-
 ![Denied 2](h5_c5_denied2.png)
+
+*UPDATE end*
 
 Halusin vielä varmuuskopion avaimista Windows koneelleni, joten päätin asentaa 7-zipin ja pakata .shh kansion salattuun .7z tiedostoon. Päädyin 7-zippiin koska se oli minulle jo entuudestaan tuttu ohjelma.
 - `$ apt-cache search 7-zip` etsin ohjelman nimen.
