@@ -88,7 +88,7 @@ Aloitin ottamalla yhteyden pilvikoneeseen `$ ssh janne@jimmonen.me` ja tekemäll
 
 Tämän jälkeen aktivoin sivun ja kokeilin `$ curl localhost` ja huomasin väärän sivun vastaavan (olisi pitänyt olla [jimmonen.me](jimmonen.me), mutta [alisivu.jimmonen.me](alisivu.jimmonen.me) vastasi).
 
-Tässä kohtaan huomasin ettei localhost toimi aliaksena VirtualHostin asetuksissa, joten käytin puolisen tuntia ongelman ratkaisemiseen eri google hauilla ja tiedstojen editoimalla.
+Huomasin ettei localhost toimi aliaksena VirtualHostin asetuksissa, joten käytin puolisen tuntia ongelman ratkaisemiseen eri google hauilla ja tiedstojen editoimalla.
 
 Päädyin siihen, että localhost sivu määrittyy VirtualHostien järjestyksen mukaan, ja koska ne on määritelty eri tiedostoissa, muutin jtuto.conf nimen 0jtuto.confiksi, jonka jälkeen `$ curl localhost/static/` tuotti halutun vastauksen.
 Toinen todennäköisesti toimiva vaihtoehto olisi ollut uudelleenohjata localhost hosts tiedostoa muokkaamalla.
@@ -119,7 +119,7 @@ Tein uuden käyttäjän ilman sudo oikeuksia ja kopioin publicwsgi:n sisällön 
 
 `$ sudo adduser jim`
 `$ sudo cp -r ./publicwsgi /home/jim/publicwsgi`
-`$ sudo -R chown /home/jim/publicwsgi`
+`$ sudo -R chown jim:jim /home/jim/publicwsgi`
 
 Muutin vielä aiemmin luodun virtuaalihostin polun viittaamaan tänne.
 
@@ -148,7 +148,7 @@ Viimeinen rivi mainitsee virheen sisennyksissä, ja tässä kohtaan muistin, et 
 
 ![Unindented](h6_b9_unindented.png)
 
-Poistin sisennyksen lisäsin ne tabulaattorilla uudeestaan, jonka jälkeen `./manage.py runserver` käynnisti dev serverin ongelmitta.
+Poistin sisennykset lisäsin ne tabulaattorilla uudeestaan, jonka jälkeen `./manage.py runserver` käynnisti dev serverin ongelmitta.
 
 ![Indent](h6_b10_indented.png)
 
@@ -158,7 +158,7 @@ Otin ssh yhteyden sudo käyttäjänä aktivoin virtualhostin ja varmistin toimiv
 
 ![Cloud apache](h6_b12_cloud_apache.png)
 
-Poistin debuggauksen ja määrittelin hyväksyttävät hostit ja latasin asetukset, ja varmistin curlilla odotetun vastauksen sivulta.
+Poistin debuggauksen ja määrittelin hyväksyttävät hostit, latasin asetukset, jonka jälkeen varmistin curlilla odotetun vastauksen sivulta.
 
 ![Debugging off](h6_b13_debug_off.png)
 
@@ -170,7 +170,7 @@ Lisäsin `import os` ja `STATIC_ROOT = os.path.join(BASE_DIR, 'static/')` rivit 
 
 ![base dir error](h6_b15_base_dir_error.png)
 
-Varmistin et BASE_DIR oli määritelty tiedostossa, ja tämän todennettuani siirsin `STATIC_ROOT = os.path.join(BASE_DIR, 'static/')` rivin viimeiseksi riviksi tiedostossa siltä varalta, että järjestyksellä on merkitystä, jonka jälkeen collect komento toimi.
+Varmistin et BASE_DIR oli määritelty settings.py tiedostossa ja tämän todennettuani siirsin `STATIC_ROOT = os.path.join(BASE_DIR, 'static/')` rivin viimeiseksi riviksi tiedostossa siltä varalta, että järjestyksellä on merkitystä, jonka jälkeen collect komento toimi.
 
 ![collect works](h6_b16_collect_works.png)
 
@@ -181,7 +181,7 @@ Päivitin vielä `jtuto.jimmonen.me` virtualhostin ServerNameksi ja otin yhteyde
 
 En lähtenyt kirjautumaan sivulle, koska sivu toimii vain http yhteydellä ja en halunnut turhaan lähetellä salasanoja suojaamattoman yhteyden yli.
 
-Yhteenvetona voidaan todeta, että jo ensiaskeleillani Pythonin kanssa alan inhota tyhjien merkkien merkitystä. Debuggaustavassani varmaankin näkyy taustani Windows käyttäjänä, koska ensioletukseni virheen syyksi olivat konfliktit ympäristön kanssa.
+Yhteenvetona voidaan todeta, että jo ensiaskeleillani Pythonin kanssa alan inhota tyhjien merkkien merkitystä.
 
 ## Lähteet
 
