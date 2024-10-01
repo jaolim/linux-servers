@@ -27,7 +27,21 @@ Ajankäyttö: 1t, 20min.
 
 Lähdin asentamaan Djangoa paikalliselle virtuaalikoneelleni [Karvisen ohjeita seuraten](https://terokarvinen.com/2022/django-instant-crm-tutorial/).
 
-Ensimmäinen askel oli asentaa kehitysympäristö
+Asensin virtuaaliympäristön.
+
+![Virtual env](h6_a1_virtualenv.png)
+
+Aloitin Django projektin.
+
+![Python django](h6_a2_python_django.png)
+
+Testasin toiminnan selaimessa
+
+![Browser](h6_a3_browser.png)
+
+Ajoin migraation.
+
+![Migration](h6_a4_migrate.png)
 
 Asensin salasanageneraattorin ja generoin salasanan.
 `$ sudo apt-get install pwgen`
@@ -36,13 +50,13 @@ Asensin salasanageneraattorin ja generoin salasanan.
 Lisäsin pääkäyttäjän käyttäen generoitua salasanaa ja kokeilin kirjautumista.
 `$ ./manage.py createsuperuser`
 
-![Superuser Login](h5_a5_superuser_login.png)
+![Superuser Login](h6_a5_superuser_login.png)
 
 Webbikäyttöliittymässä tein uuden käyttäjän ja lisäsin tälle henkilökunta- ja pääkäyttäjäoikeudet.
 
 ![New User](h6_a6_new_user.png)
 
-![Permissions](h6_a7_permissions.png)
+![Permissions](h6_a7_pemissions.png)
 
 Tein asiakastietokannan ajamalla `$ ./manage.py startapp crm` ja lisäsin sen INSTALLED_APPS kohtaan settings.py tiedostossa.
 
@@ -63,7 +77,7 @@ Lisäsin webbikäyttöliittymässä uuden asiakkaan ja määrittelin asiakkaan n
 ![Customer Named](h6_a12_customer_named.png)
 
 ### b) Tee Djangon tuotantotyyppinen asennus
-Ajankäyttö: 5t, 8min
+Ajankäyttö: 5t, 8min.
 
 Seurasin tässäkin tehtävässä [Karvisen ohjetta](https://terokarvinen.com/2022/deploy-django/).
 Päätin tehdä toteutuksen pilvikoneelle.
@@ -72,9 +86,9 @@ Aloitin ottamalla yhteyden pilvikoneeseen `$ ssh janne@jimmonen.me` ja tekemäll
 
 ![Virtual Host](h6_b1_vh.png)
 
-Tämän jälkeen aktivoin sivun ja kokeilin `$ curl localhost` ja huomasin väärän sivun vastaavan (olisi pitänyt olla [jimmonen.me](jimmonen.me), mutta [alisivu.jimmonen.me](alisivu.jimmonen.me)vastasi).
+Tämän jälkeen aktivoin sivun ja kokeilin `$ curl localhost` ja huomasin väärän sivun vastaavan (olisi pitänyt olla [jimmonen.me](jimmonen.me), mutta [alisivu.jimmonen.me](alisivu.jimmonen.me) vastasi).
 
-Tässä kohtaan huomasin ettei localhost toimi aliaksena VirtualHostin asetuksissa, ja käytin puolisen tuntia ongelman ratkaisemiseen eri google hauilla ja tiedstojen editoimalla.
+Tässä kohtaan huomasin ettei localhost toimi aliaksena VirtualHostin asetuksissa, joten käytin puolisen tuntia ongelman ratkaisemiseen eri google hauilla ja tiedstojen editoimalla.
 
 Päädyin siihen, että localhost sivu määrittyy VirtualHostien järjestyksen mukaan, ja koska ne on määritelty eri tiedostoissa, muutin jtuto.conf nimen 0jtuto.confiksi, jonka jälkeen `$ curl localhost/static/` tuotti halutun vastauksen.
 Toinen todennäköisesti toimiva vaihtoehto olisi ollut uudelleenohjata localhost hosts tiedostoa muokkaamalla.
@@ -136,7 +150,7 @@ Viimeinen rivi mainitsee virheen sisennyksissä, ja tässä kohtaan muistin, et 
 
 Poistin sisennyksen lisäsin ne tabulaattorilla uudeestaan, jonka jälkeen `./manage.py runserver` käynnisti dev serverin ongelmitta.
 
-![Indent](h6_b10_unindented.png)
+![Indent](h6_b10_indented.png)
 
 Otin ssh yhteyden sudo käyttäjänä aktivoin virtualhostin ja varmistin toimivuuden curlilla.
 
@@ -148,26 +162,26 @@ Poistin debuggauksen ja määrittelin hyväksyttävät hostit ja latasin asetuks
 
 ![Debugging off](h6_b13_debug_off.png)
 
-- `$ touch wsgi.py`
+- `$ touch wsgi.py` - järjestelmä tunnistaa, että tiedostoa on muokattu ja django lataa sen uudelleen
 - (sudo käyttäjänä)`$ sudo systemctl restart apache2`
-- `$ curl -s localhost|grep title`
+- `$ curl -s localhost|grep title` - 404 haluttu vastaus
 
 Lisäsin `import os` ja `STATIC_ROOT = os.path.join(BASE_DIR, 'static/')` rivit settings.py tiedostoon ja ajoin `$ ./manage.py collectstatic`, mutta tämä aiheutti virheen.
 
-![base dir error](h6_base_dir_error.png)
+![base dir error](h6_b15_base_dir_error.png)
 
 Varmistin et BASE_DIR oli määritelty tiedostossa, ja tämän todennettuani siirsin `STATIC_ROOT = os.path.join(BASE_DIR, 'static/')` rivin viimeiseksi riviksi tiedostossa siltä varalta, että järjestyksellä on merkitystä, jonka jälkeen collect komento toimi.
 
 ![collect works](h6_b16_collect_works.png)
 
-Päivitin vielä `jtuto.jimmonen.me` virtualhostin ServerNameksi ja otin yhteyden pöytäkoneelta osoitteeseen [http://jtuto.jimmonen.me/admin/](http://jtuto.jimmonen.me/admin/) toiminnan varmistaseksi. Tässä kohtaan pelkkä virtualhostin muokkaaminen riitti, koska minulla on NameCheapissä wildcard Cname, joka ohjaa kaikki jimmonen.me loppuiset osoitteet pilvipalvelimeni IP-osoitteeseeen.
+Päivitin vielä `jtuto.jimmonen.me` virtualhostin ServerNameksi ja otin yhteyden pöytäkoneelta osoitteeseen [http://jtuto.jimmonen.me/admin/](http://jtuto.jimmonen.me/admin/) toiminnan varmistamiseksi. Tässä kohtaan pelkkä virtualhostin muokkaaminen riitti, koska minulla oli NameCheapissä wildcard Cname, joka ohjaa kaikki jimmonen.me loppuiset osoitteet pilvipalvelimeni IP-osoitteeseeen.
 
 ![VH updated](h6_b17_vh_updated.png)
 ![website works](h6_b18_website_works.png)
 
-En lähtenyt kirjautumaan sivulle, koska sivu toimii vain http yhteydellä ja en halua turhaan lähetellä salasanoja suojaamattoman yhteyden yli.
+En lähtenyt kirjautumaan sivulle, koska sivu toimii vain http yhteydellä ja en halunnut turhaan lähetellä salasanoja suojaamattoman yhteyden yli.
 
-Yhteenvetona voidaan todeta, että jo ensiaskeleillani Pythonin kanssa alan inhota tyhjien merkkien merkitystä. Debuggaustavassa varmaan näkyy taustani Windows käyttäjänä, jossa ensioletukseni virheen syyksi olivat konfliktit ympäristön kanssa.
+Yhteenvetona voidaan todeta, että jo ensiaskeleillani Pythonin kanssa alan inhota tyhjien merkkien merkitystä. Debuggaustavassani varmaankin näkyy taustani Windows käyttäjänä, koska ensioletukseni virheen syyksi olivat konfliktit ympäristön kanssa.
 
 ## Lähteet
 
