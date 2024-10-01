@@ -86,7 +86,9 @@ Aloitin ottamalla yhteyden pilvikoneeseen `$ ssh janne@jimmonen.me` ja tekemäll
 
 ![Virtual Host](h6_b1_vh.png)
 
-Tämän jälkeen aktivoin sivun ja kokeilin `$ curl localhost` ja huomasin väärän sivun vastaavan (olisi pitänyt olla [jimmonen.me](jimmonen.me), mutta [alisivu.jimmonen.me](alisivu.jimmonen.me) vastasi).
+*Päivitys 01.10.2024 16:40: jimmonen.me ja alisivu.jimmonen.me linkit korjattu*
+
+Tämän jälkeen aktivoin sivun ja kokeilin `$ curl localhost` ja huomasin väärän sivun vastaavan (olisi pitänyt olla [http://jimmonen.me](http://jimmonen.me), mutta [http://alisivu.jimmonen.me](http://alisivu.jimmonen.me) vastasi).
 
 Huomasin ettei localhost toimi aliaksena VirtualHostin asetuksissa, joten käytin puolisen tuntia ongelman ratkaisemiseen eri google hauilla ja tiedostojen editoimalla.
 
