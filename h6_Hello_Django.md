@@ -88,7 +88,7 @@ Aloitin ottamalla yhteyden pilvikoneeseen `$ ssh janne@jimmonen.me` ja tekemäll
 
 Tämän jälkeen aktivoin sivun ja kokeilin `$ curl localhost` ja huomasin väärän sivun vastaavan (olisi pitänyt olla [jimmonen.me](jimmonen.me), mutta [alisivu.jimmonen.me](alisivu.jimmonen.me) vastasi).
 
-Huomasin ettei localhost toimi aliaksena VirtualHostin asetuksissa, joten käytin puolisen tuntia ongelman ratkaisemiseen eri google hauilla ja tiedstojen editoimalla.
+Huomasin ettei localhost toimi aliaksena VirtualHostin asetuksissa, joten käytin puolisen tuntia ongelman ratkaisemiseen eri google hauilla ja tiedostojen editoimalla.
 
 Päädyin siihen, että localhost sivu määrittyy VirtualHostien järjestyksen mukaan, ja koska ne on määritelty eri tiedostoissa, muutin jtuto.conf nimen 0jtuto.confiksi, jonka jälkeen `$ curl localhost/static/` tuotti halutun vastauksen.
 Toinen todennäköisesti toimiva vaihtoehto olisi ollut uudelleenohjata localhost hosts tiedostoa muokkaamalla.
@@ -170,7 +170,7 @@ Lisäsin `import os` ja `STATIC_ROOT = os.path.join(BASE_DIR, 'static/')` rivit 
 
 ![base dir error](h6_b15_base_dir_error.png)
 
-Varmistin et BASE_DIR oli määritelty settings.py tiedostossa ja tämän todennettuani siirsin `STATIC_ROOT = os.path.join(BASE_DIR, 'static/')` rivin viimeiseksi riviksi tiedostossa siltä varalta, että järjestyksellä on merkitystä, jonka jälkeen collect komento toimi.
+Varmistin että BASE_DIR oli määritelty settings.py tiedostossa ja tämän todennettuani siirsin `STATIC_ROOT = os.path.join(BASE_DIR, 'static/')` rivin viimeiseksi riviksi tiedostossa siltä varalta, että järjestyksellä on merkitystä, jonka jälkeen collect komento toimi.
 
 ![collect works](h6_b16_collect_works.png)
 
