@@ -63,6 +63,7 @@ Lisäsin webbikäyttöliittymässä uuden asiakkaan ja määrittelin asiakkaan n
 ![Customer Named](h6_a12_customer_named.png)
 
 ### b) Tee Djangon tuotantotyyppinen asennus
+Ajankäyttö: 5t, 8min
 
 Seurasin tässäkin tehtävässä [Karvisen ohjetta](https://terokarvinen.com/2022/deploy-django/).
 Päätin tehdä toteutuksen pilvikoneelle.
@@ -168,4 +169,10 @@ En lähtenyt kirjautumaan sivulle, koska sivu toimii vain http yhteydellä ja en
 
 Yhteenvetona voidaan todeta, että jo ensiaskeleillani Pythonin kanssa alan inhota tyhjien merkkien merkitystä. Debuggaustavassa varmaan näkyy taustani Windows käyttäjänä, jossa ensioletukseni virheen syyksi olivat konfliktit ympäristön kanssa.
 
+## Lähteet
 
+Karvinen, T. 2024. h6 Hello Django. https://terokarvinen.com/linux-palvelimet/#h6-hello-django
+
+Karvinen, T. 2022. Django 4 Instant Customer Database Tutorial . https://terokarvinen.com/2022/django-instant-crm-tutorial/
+
+karvinen, T. 2022. Deploy Django 4 - Production Install. https://terokarvinen.com/2022/deploy-django/
