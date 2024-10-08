@@ -67,7 +67,7 @@ Ensimmäiseen versioon laitoin vain tekstin tulostuksen napin painalluksella.
 
 ![JavaScript first](h7_a4_js_initial.png)
 
-Button elementti ajaa siis painettaessa JavaScript funktion, joka kirjoittaa <p></p> elementin sisällön viitaten siihen id:n avulla.
+Button elementti ajaa siis painettaessa JavaScript funktion, joka kirjoittaa paragraph elementin sisällön viitaten siihen id:n avulla.
 
 Seuraavaksi lisäsin logiikan tilan seurantaan käyttäen sivun ladatessa nollaan alustettua muuttujaa, jonka arvoa muutetaan funktiota ajaessa, ja jonka arvon perusteella tulostetaan joko "Hello World!" tai "".
 
@@ -93,11 +93,11 @@ Päätin tehdä skriptin hakemaan ensimmäisenä argumenttina annettua sanaa nyk
 
 Tein kasan alikansioita ja tiedostoja toiminnan testaamiseksi.
 
-![Sub directories](h7_b2_sub_directories.png])
+![Sub directories](h7_b2_sub_directories.png)
 
 Varmistin ensin itse komennon toimivan halutun kaltaisesti.
 
-![Command works](h7_b3_command_works)
+![Command works](h7_b3_command_works.png)
 
 Muokkasin testin.sh:n sisällön käyttäen `$1` viittaamaan ensimmäiseen käyttäjän antamaan argumenttiin ja uudelleennimesin sen etsi.sh:ksi (etten sekoittaisi mahdollisiin valmiisiin englanninkielisiin komentoihin), jonka jälkeen testasin toiminnan.
 
@@ -131,17 +131,18 @@ Ensiksi asensin puhtaan virtuaalikoneen ja guest additionsin.
 
 Käytin tehtävissä ohjeistettua suppeampaa raportointimenetelmää, jossa riittää testit tehtävien varmentamiseksi ja itse tehtävien vaiheet voi ylittää. Tämän määritys ja kansiorakenne raportille löytyy linkistä kohdasta Ohjeita. Koska olin jo tehnyt tätä raporttia Windowsin puolella, päätin luoda tehtävissä vaaditut tiedostot oikeisiin kansioihin, mutta tehdä itse raportin suoraan tähän Windows versioon.
 
-Lähtötilanteessa siis oli uusi Debian install VirtualBoxiin, johon oli asennettu guest additions ja ajettu `$ sudo apt-get update` ja `$ sudo apt-get dist-upgrade` komennot.
+Lähtötilanne oli siis uusi Debian install VirtualBoxiin, johon oli asennettu guest additions ja ajettu `$ sudo apt-get update` ja `$ sudo apt-get dist-upgrade` komennot.
+
 ### a) Taustatiedot
 
 Hyppäsin tämän kohdan yli soveltumattomuuden vuoksi.
 
 ### b) Tiivistelmä koko työstä lopuksi
-
+- *Vastaa tähän kohtaan aivan viimeisenä*
 - *Mikä toimii, mikä ei*
--- *Tämä toimii: toimivien palveluiden osoitteet tai polut komentoihin*
--- *Tämä ei vielä toimi: luettelo kohdista, joita ei ratkaistu.*
---- *Huomaa, että nopeimpienkin viihdyttämiseksi tässä tehtävässä on enemmän kohtia kuin mitä muutamassa tunnissa ehtii ratkoa.*
+	- *Tämä toimii: toimivien palveluiden osoitteet tai polut komentoihin*
+	- *Tämä ei vielä toimi: luettelo kohdista, joita ei ratkaistu.*
+		- *Huomaa, että nopeimpienkin viihdyttämiseksi tässä tehtävässä on enemmän kohtia kuin mitä muutamassa tunnissa ehtii ratkoa.*
 
 Aloitusaika: 02:22:23 / 02:40:00
 
@@ -149,7 +150,7 @@ Kaikki mitä päätin tehdä lopulta toimi, tosin aikapaineen takia oletan, ett�
 
 Joissain kohdissa piti muistin virkistykseksi konsultoida googlea, mutta tieto löytyi nopeasti, koska vastaavat asiat oli toteutettua jo lähiaikoina.
 
-Pääosa ongelmista johtui huolimattomuudesta komennoissa, poluissa ja asetustiedostoissa, kuten VirtualHostien .conf tiedostoissa.
+Pääosa ongelmista johtui huolimattomuudesta komennoissa, poluissa, tai asetustiedostoissa, kuten VirtualHostien .conf tiedostoissa.
 
 Lopetusaika: 02:25:50 / 02:40:00
 
@@ -159,7 +160,7 @@ Lopetusaika: 02:25:50 / 02:40:00
 
 Aloitusaika: 00:00:00 / 02:40:00
 
-Asensin micron `$ sudo apt-get install micro` ja tein raporttitiedoston oikeaan kansioon.
+Asensin micron `$ sudo apt-get install micro` ja tein raporttitiedoston oikeaan kansioon ja määrittelin vain omistaja käyttäjälle luku ja kirjoitusoikeudet.
 ![c](h7_c2_c.png)
 
 	
@@ -191,10 +192,9 @@ Aloitusaika: 00:14:17 / 02:40:00
 
 Asensin apachen ja poistin oletussivun käytöstä, jonka jälkeen tein uuden kansion ja index.html tiedoston käyttäjän kotihakemistoon ja uuden virtualhostin käyttämään tätä kansiota.
 
-![E1](h7_c5_e1.png)
-![E1](h7_c5_e1.png)
+![E](h7_c5_e.png)
 
-## g) Salattua hallintaa
+### g) Salattua hallintaa
 
 - *Asenna ssh-palvelin*
 - *Tee uusi käyttäjä omalla nimelläsi, esim. minä tekisin "Tero Karvinen test", login name: "terote01"*
@@ -202,26 +202,27 @@ Asensin apachen ja poistin oletussivun käytöstä, jonka jälkeen tein uuden ka
 
 Aloitusaika: 00:40:52 / 02:40:00
 
-`$ sudo apt-get isntall ssh`
-`$ ssh-keygen`
-`$ sudo adduser janne01`
-`$ ssh-copy-id janne01@locahost`
-`$ ssh janne01@localhost`
+- `$ sudo apt-get isntall ssh`
+- `$ ssh-keygen`
+- `$ sudo adduser janne01`
+- `$ ssh-copy-id janne01@locahost`
+- `$ ssh janne01@localhost`
 
+![G](h7_c6_g.png)
 
-## h) Djangon lahjat
+### h) Djangon lahjat
 
 - *Asenna omalle käyttäjällesi Django-kehitysympäristö*
 - *Tee tietokantaan lista tekoälyistämme, jossa on nämä ominaisuudet*
--- *Kirjautuminen salasanalla*
--- *Tietokannan muokkaus wepissä Djangon omalla ylläpitoliittymällä (Django admin)*
--- *Käyttäjä Erkille, jossa ei ole ylläpito-oikeuksia*
--- *Taulu Assistants, jossa jokaisella tietueella on nimi (name)*
--- *Jos haluat, voit lisäksi bonuksena laittaa mukaan kentän koko (size)*
+	- *Kirjautuminen salasanalla*
+	- *Tietokannan muokkaus wepissä Djangon omalla ylläpitoliittymällä (Django admin)*
+	- *Käyttäjä Erkille, jossa ei ole ylläpito-oikeuksia*
+	- *Taulu Assistants, jossa jokaisella tietueella on nimi (name)*
+	- *Jos haluat, voit lisäksi bonuksena laittaa mukaan kentän koko (size)*
 
 Aloitusaika: 00:52:20 / 02:40:00
 
-Asensin virtuaaliympäristön komennolla `$ sudo apt-get virtualenv` ja tein sinne uuden django projektin practice, johon tein yhden pääkäyttäjän, yhden peruskäyttjäjän nimeltä Erkki ja appin nimellä testing, joka tuottaa Assistants taulun tietokantaan.
+Asensin virtuaaliympäristön komennolla `$ sudo apt-get virtualenv` ja tein sinne uuden django projektin practice, johon tein yhden pääkäyttäjän, yhden peruskäyttäjän nimeltä Erkki ja appin nimellä testing, joka tuottaa Assistants taulun tietokantaan.
 
 Lisäsin vielä esimerkki Assistantin nimellä Asdf.
 
@@ -229,7 +230,7 @@ Lisäsin vielä esimerkki Assistantin nimellä Asdf.
 
 ![H2](h7_c8_h2.png)
 
-## h) Tuotantopropelli
+### h) Tuotantopropelli
 
 - *Jos olet tässä kohdassa, olet kyllä työskennellyt todella nopeasti (tai sitten teet tätä tehtävää huviksesi kurssin jälkeen). Mutta älä huoli, tässä haastetta, jotta et joudu pyörittelemään peukaloita.*
 - *Tee tuotantotyyppinen asennus Djangosta*
@@ -240,11 +241,11 @@ Aloitusaika: 01:53:10 / 02:40:00
 
 Asensin wsgi:n komennolla `$ sudo apt-get -y install libapache2-mod-wsgi-py3`, tein static hakemiston, tein virtual hostin, uudelleenkäynnistin apachen ja testasin toiminnan.
 
-[H3](h7_c9_h3.png)
+![H3](h7_c9_h3.png)
 
 Poistin debuggauksen ja määrittelin hyväksytyt hostit.
 
-[H4](h7_c10_h4.png)
+![H4](h7_c10_h4.png)
 
 Määrittelin tyylit lisäämällä `import os` ja `STATIC_ROOT = os.path.join(BASE_DIR, 'static/')` rivit settings.py tiedostoon ja ajoin `$ ./manage.py collectstatic` niiden aktivointiin, jonka jälkeen testasin tyylien päivittyneen.
 
