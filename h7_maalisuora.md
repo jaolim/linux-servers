@@ -161,6 +161,7 @@ Lopetusaika: 02:25:50 / 02:40:00
 Aloitusaika: 00:00:00 / 02:40:00
 
 Asensin micron `$ sudo apt-get install micro` ja tein raporttitiedoston oikeaan kansioon ja määrittelin vain omistaja käyttäjälle luku ja kirjoitusoikeudet.
+
 ![c](h7_c2_c.png)
 
 	
